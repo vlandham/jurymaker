@@ -21,3 +21,10 @@ execute command
 
 command = "cp #{report_request_filename} #{report_dir}/data/input.json"
 execute command
+
+case_filename = File.join(report_dir, "data", "case.html")
+case_html = report_data["custom_report"]["description_html"]
+File.open(case_filename, 'w') do |file|
+  file.puts case_html
+end
+
