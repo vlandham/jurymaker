@@ -2,6 +2,11 @@
 
 require 'json'
 report_request_filename = ARGV[0]
+output_dir = ARGV[1]
+
+if !output_dir
+  output_dir = File.dirname(report_request_filename)
+end
 
 def execute command
   puts command
@@ -14,7 +19,7 @@ report_data = JSON.parse(File.open(report_request_filename, 'r').read)
 
 id = report_data["custom_report"]["id"]
 
-report_dir = "jurydata_#{id}"
+report_dir = File.join(output_dir, "jurydata_#{id}")
 
 command = "git clone #{jurydata_url} #{report_dir}"
 execute command
