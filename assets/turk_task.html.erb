@@ -22,7 +22,7 @@
 <option>Graduate degree (Masters, Doctorate, etc.)</option>
 </select></p>
 <p>&nbsp;4. How much money do you make in a year?</p>
-<p><select name="Q4income" size="4">
+<p><select name="Q4income">
 <option>Less than $12,000</option>
 <option>$12,000 - $25,000</option>
 <option>$25,000 - $37,000</option>
@@ -33,28 +33,39 @@
 <option>$87,000 - $100,000</option>
 <option>$100,000 or More</option>
 </select></p>
+
+<p>&nbsp;5. Please specify your ethnicity:</p>
+<p><select name="Q5ethnicity">
+<option>White</option>
+<option>Hispanic or Latino</option>
+<option>Black or African American</option>
+<option>Native American</option>
+<option>Asian / Pacific Islander</option>
+<option>Other</option>
+</select></p>
+
 <p>&nbsp;Read the paragraphs below about a court case and then answer the questions underneath:</p>
 <h2>The Facts of the Case</h2>
 <div id="case_facts" style="padding:10px;border:2px #ddd solid;width:500px;">
   <%= @report["custom_report"]["description_html"] %>
 </div>
 
-  <p>&nbsp;5. Given these facts, do you believe <%= @report["custom_report"]["defendant"] %> is responsible?</p>
+  <p>&nbsp;6. Given these facts, do you believe <%= @report["custom_report"]["defendant"] %> is responsible?</p>
 <table cellspacing="4" cellpadding="0" border="0">
     <tbody>
         <tr>
-            <td valign="center"><input type="radio" name="Q5Responsible" value="Yes" /></td>
+            <td valign="center"><input type="radio" name="Q6Responsible" value="Yes" /></td>
             <td><span class="answertext">Yes</span></td>
-            <td valign="center"><input type="radio" name="Q5Responsible" value="No" /></td>
+            <td valign="center"><input type="radio" name="Q6Responsible" value="No" /></td>
             <td><span class="answertext">No</span></td>
         </tr>
     </tbody>
 </table>
-<p>&nbsp;6. Assuming <%= @report["custom_report"]["defendant"] %> <strong>is</strong> responsible, How much money should <%= @report["custom_report"]["plaintiff"] %> be given in a court of law?</p>
+<p>&nbsp;7. Assuming <%= @report["custom_report"]["defendant"] %> <strong>is</strong> responsible, How much money should <%= @report["custom_report"]["plaintiff"] %> be given in a court of law?</p>
 <p>Please type in an actual amount, rounding to the nearest $100</p>
-<p>$<input type="text" name="Q6amount" id="Q6amount" size="30" /></p>
-<p>&nbsp;7. Why do you think <%= @report["custom_report"]["plaintiff"] %> should be given this amount?</p>
-<p><textarea rows="10" cols="60" name="Q7comment" id="Q7comment"></textarea></p>
-<p>&nbsp;8. What facts about the case most effected your decision?</p>
-<p><textarea rows="10" cols="60" name="Q8facts" id="Q8facts"></textarea></p>
+<p>$<input type="text" name="amount" id="amount" size="30" /></p>
+<p>&nbsp;8. Why do you think <%= @report["custom_report"]["plaintiff"] %> should be given this amount?</p>
+<p><textarea rows="10" cols="60" name="comment" id="comment"></textarea></p>
+<p>&nbsp;9. What facts about the case most effected your decision?</p>
+<p><textarea rows="10" cols="60" name="facts" id="facts"></textarea></p>
 
