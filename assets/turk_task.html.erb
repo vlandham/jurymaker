@@ -60,12 +60,28 @@
             <td><span class="answertext">No</span></td>
         </tr>
     </tbody>
-</table>
-<p>&nbsp;7. Assuming <%= @report["custom_report"]["defendant"] %> <strong>is</strong> responsible, How much money should <%= @report["custom_report"]["plaintiff"] %> be given in a court of law?</p>
+  </table>
+  <p>&nbsp;7. On a scale of 0 (not responsible at all) to 100 (completely responsible), how responsible is <%= @report["custom_report"]["defendant"] %></p>
+  <p><select name="responsiblePercent">
+<option>0</option>
+<option>10</option>
+<option>20</option>
+<option>30</option>
+<option>40</option>
+<option>50</option>
+<option>60</option>
+<option>70</option>
+<option>80</option>
+<option>90</option>
+<option>100</option>
+</select></p>
+ <p>&nbsp;8. What facts were important to you in arriving at that conclusion</p>
+<p>Please provide four sentences of description</p>
+<p><textarea rows="10" cols="60" name="facts" id="facts"></textarea></p>
+ 
+<p>&nbsp;9. Assuming <%= @report["custom_report"]["defendant"] %> <strong>is</strong> responsible, How much money should <%= @report["custom_report"]["plaintiff"] %> be given in a court of law?</p>
 <p>Please type in an actual amount, rounding to the nearest $100</p>
 <p>$<input type="text" name="amount" id="amount" size="30" /></p>
-<p>&nbsp;8. Why do you think <%= @report["custom_report"]["plaintiff"] %> should be given this amount?</p>
+<p>&nbsp;10. Why did you award <%= @report["custom_report"]["plaintiff"] %> this amount?</p>
 <p><textarea rows="10" cols="60" name="comment" id="comment"></textarea></p>
-<p>&nbsp;9. What facts about the case most effected your decision?</p>
-<p><textarea rows="10" cols="60" name="facts" id="facts"></textarea></p>
 
