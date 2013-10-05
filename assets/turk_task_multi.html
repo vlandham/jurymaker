@@ -1,0 +1,103 @@
+<h3>Answer a short survey about a court case</h3>
+<p>1. What is your gender?</p>
+<table cellspacing="4" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td valign="center"><input type="radio" name="Q1Gender" value="Male" /></td>
+            <td><span class="answertext">Male</span></td>
+            <td valign="center"><input type="radio" name="Q1Gender" value="Female" /></td>
+            <td><span class="answertext">Female</span></td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;2. What is your age?</p>
+<p><input type="text" name="Q2age" id="Q2age" size="10" /></p>
+
+<p>&nbsp;3. Which of the following best describes your highest achieved education level?</p>
+<p><select name="Q3eductation">
+<option>Some High School</option>
+<option>High School Graduate</option>
+<option>Some college, no degree</option>
+<option>Associates degree</option>
+<option>Bachelors degree</option>
+<option>Graduate degree (Masters, Doctorate, etc.)</option>
+</select></p>
+<p>&nbsp;4. How much money do you make in a year?</p>
+<p><select name="Q4income">
+<option>Less than $12,000</option>
+<option>$12,000 - $25,000</option>
+<option>$25,000 - $37,000</option>
+<option>$37,000 - $50,000</option>
+<option>$50,000 - $62,000</option>
+<option>$62,000 - $75,000</option>
+<option>$75,000 - $87,000</option>
+<option>$87,000 - $100,000</option>
+<option>$100,000 or More</option>
+</select></p>
+
+<p>&nbsp;5. Please specify your ethnicity:</p>
+<p><select name="Q5ethnicity">
+<option>White</option>
+<option>Hispanic or Latino</option>
+<option>Black or African American</option>
+<option>Native American</option>
+<option>Asian / Pacific Islander</option>
+<option>Other</option>
+</select></p>
+
+<p>&nbsp;6. Enter your zipcode:</p>
+<p><input type="text" name="zipcode" id="zipcode" size="10" /></p>
+
+<p>&nbsp;Read the paragraphs below about a court case and then answer the questions underneath:</p>
+
+<h2>Quick Test Case</h2>
+<div id="test_case_facts" style="padding:10px;border:2px #ddd solid;width:500px;">
+Mr. Driver is in a hurry and runs a red light. He collides with a car being driven by Ms. Victim.  Ms. Victim’s airbags deploy. Her car is damaged beyond repair, but she can open the door enough to get out.  She is "shaken up." A friend drives her to a hospital after her car is towed away. She is diagnosed with bruised ribs and a back strain consistent with "whiplash."  She is prescribed three weeks of physical therapy and pain medication.  She misses the next two days of work. 
+</div>
+
+<p>&nbsp;7. How much money should Ms. Victim receive in a court of law?</p>
+<p>Please type in an actual amount, rounding to the nearest $100</p>
+<p>$<input type="text" name="test_amount" id="test_amount" size="30" /></p>
+
+<p>&nbsp;Read the paragraphs below about a court case and then answer the questions underneath:</p>
+
+<h2>The Facts of the Case</h2>
+<div id="case_facts" style="padding:10px;border:2px #ddd solid;width:500px;">
+  ${description}
+</div>
+
+<p>&nbsp;8. Given these facts, do you believe ${defendant} is responsible?</p>
+<table cellspacing="4" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td valign="center"><input type="radio" name="Q6Responsible" value="Yes" /></td>
+            <td><span class="answertext">Yes</span></td>
+            <td valign="center"><input type="radio" name="Q6Responsible" value="No" /></td>
+            <td><span class="answertext">No</span></td>
+        </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;9. On a scale of 0 (not responsible at all) to 100 (completely responsible), how responsible is ${defendant}</p>
+  <p><select name="responsiblePercent">
+<option>0</option>
+<option>10</option>
+<option>20</option>
+<option>30</option>
+<option>40</option>
+<option>50</option>
+<option>60</option>
+<option>70</option>
+<option>80</option>
+<option>90</option>
+<option>100</option>
+</select></p>
+
+<p>&nbsp;10. Assuming ${defendant} <strong>is</strong> responsible, How much money should ${plaintiff} be given in a court of law?</p>
+<p>Please type in an actual amount, rounding to the nearest $100</p>
+<p>$<input type="text" name="amount" id="amount" size="30" /></p>
+
+ <p>&nbsp;11. Why did you award the amount you did?</p>
+<p>Please provide a through explanation.</p>
+<p><textarea rows="10" cols="60" name="facts" id="facts"></textarea></p>
+
+<p style="display:none">${id}</p>
